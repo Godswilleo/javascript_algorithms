@@ -2,11 +2,19 @@
 
 function unique(arr){
 
-    let new_obj = ""
+    const new_obj = {}
+
+    //loop through the array and set its elements as the key of new_obj and set their value to 0
     for (let i = 0; i < arr.length; i++)
     {
-        // not yet completed. will be completed later
+        new_obj[arr[i]] = 0
     }
+    
+    // loop through the array again and increment the values of new_obj by 1 where the respective key is equal to x
+    arr.forEach(x=>{
+        new_obj[x] += 1
+    })
+
 
     console.log(new_obj)
 
